@@ -8,31 +8,25 @@
     mc:Ignorable="d">
     <Page.Resources>
         <DataTemplate x:Key="ActivationParameterDateTemplate">
-            <TextBlock
-                Text="{Binding}"
-                Style="{StaticResource BodyTextStyle}" />
+            <TextBlock Style="{StaticResource BodyTextStyle}" Text="{Binding}" />
         </DataTemplate>
     </Page.Resources>
-    <Grid
-        x:Name="ContentArea"
-        Margin="{StaticResource MediumLeftRightMargin}">
+    <Grid x:Name="ContentArea" Margin="{StaticResource MediumLeftRightMargin}">
         <Grid.RowDefinitions>
             <RowDefinition Height="48" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <TextBlock
-            Grid.Row="0"
             x:Uid="SchemeActivationSamplePage_Title"
+            Grid.Row="0"
             Style="{StaticResource PageTitleStyle}" />
         <TextBlock
-            Grid.Row="1"
             x:Uid="SchemeActivationSamplePage_Description"
+            Grid.Row="1"
             Style="{StaticResource BodyTextStyle}" />
         <ScrollViewer Grid.Row="2" Margin="{StaticResource SmallTopBottomMargin}">
-            <ItemsControl
-                ItemsSource="{x:Bind ViewModel.Parameters}"
-                ItemTemplate="{StaticResource ActivationParameterDateTemplate}" />
+            <ItemsControl ItemTemplate="{StaticResource ActivationParameterDateTemplate}" ItemsSource="{x:Bind ViewModel.Parameters}" />
         </ScrollViewer>
     </Grid>
 </Page>

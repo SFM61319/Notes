@@ -7,6 +7,173 @@
     Style="{StaticResource PageStyle}"
     mc:Ignorable="d">
     <Grid x:Name="ContentArea">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <RelativePanel>
+            <TextBlock
+                x:Name="headerTitle"
+                x:Uid="InkDrawPictureHeader"
+                Margin="{StaticResource MediumLeftMargin}"
+                MaxLines="1"
+                RelativePanel.AlignLeftWithPanel="True"
+                RelativePanel.AlignVerticalCenterWith="toolbar"
+                RelativePanel.LeftOf="toolbar"
+                Style="{StaticResource PageTitleStyle}"
+                TextTrimming="CharacterEllipsis" />
+            <InkToolbar
+                x:Name="toolbar"
+                Background="Transparent"
+                RelativePanel.AlignHorizontalCenterWithPanel="True"
+                TargetInkCanvas="{x:Bind inkCanvas}">
+                <InkToolbarCustomToggleButton
+                    x:Uid="InkDrawPicture_TouchInkingButton"
+                    Background="Transparent"
+                    IsChecked="{x:Bind ViewModel.EnableTouch, Mode=TwoWay}">
+                    <FontIcon FontFamily="{ThemeResource SymbolThemeFontFamily}" Glyph="&#xED5F;" />
+                </InkToolbarCustomToggleButton>
+                <InkToolbarCustomToggleButton
+                    x:Uid="InkDrawPicture_MouseInkingButton"
+                    Background="Transparent"
+                    IsChecked="{x:Bind ViewModel.EnableMouse, Mode=TwoWay}">
+                    <FontIcon FontFamily="{ThemeResource SymbolThemeFontFamily}" Glyph="&#xE962;" />
+                </InkToolbarCustomToggleButton>
+            </InkToolbar>
+            <CommandBar
+                x:Name="topCommandBar"
+                RelativePanel.AlignRightWithPanel="True"
+                RelativePanel.RightOf="toolbar"
+                Style="{StaticResource InkCommandBarStyle}">
+                <CommandBar.PrimaryCommands>
+                    <AppBarButton
+                        x:Uid="InkDrawPicture_ZoomInButton"
+                        BorderBrush="Transparent"
+                        BorderThickness="0,0,0,0"
+                        Command="{x:Bind ViewModel.ZoomInCommand}"
+                        Icon="ZoomIn" />
+                    <AppBarButton
+                        x:Uid="InkDrawPicture_ZoomOutButton"
+                        BorderBrush="Transparent"
+                        BorderThickness="0,0,0,0"
+                        Command="{x:Bind ViewModel.ZoomOutCommand}"
+                        Icon="ZoomOut" />
+                </CommandBar.PrimaryCommands>
+                <CommandBar.SecondaryCommands>
+                    <AppBarButton
+                        x:Uid="InkDrawPicture_OriginalSizeButton"
+                        BorderBrush="Transparent"
+                        BorderThickness="0,0,0,0"
+                        Command="{x:Bind ViewModel.ResetZoomCommand}"
+                        Icon="FullScreen" />
+                    <AppBarButton
+                        x:Uid="InkDrawPicture_FitToScreenButton"
+                        BorderBrush="Transparent"
+                        BorderThickness="0,0,0,0"
+                        Command="{x:Bind ViewModel.FitToScreenCommand}">
+                        <FontIcon FontFamily="{ThemeResource SymbolThemeFontFamily}" Glyph="&#xE73F;" />
+                    </AppBarButton>
+                    <AppBarSeparator />
+                    <AppBarButton
+                        x:Uid="InkDrawPicture_OpenImageButton"
+                        BorderBrush="Transparent"
+                        BorderThickness="0,0,0,0"
+                        Command="{x:Bind ViewModel.LoadImageCommand}">
+                        <FontIcon FontFamily="{ThemeResource SymbolThemeFontFamily}" Glyph="&#xEB9F;" />
+                    </AppBarButton>
+                    <AppBarButton
+                        x:Uid="InkDrawPicture_SaveImageButton"
+                        BorderBrush="Transparent"
+                        BorderThickness="0,0,0,0"
+                        Command="{x:Bind ViewModel.SaveImageCommand}"
+                        Icon="Save" />
+                    <AppBarSeparator />
+                    <AppBarButton
+                        x:Uid="InkDrawPicture_ClearAllButton"
+                        BorderBrush="Transparent"
+                        BorderThickness="0,0,0,0"
+                        Command="{x:Bind ViewModel.ClearAllCommand}"
+                        Icon="Delete" />
+                </CommandBar.SecondaryCommands>
+            </CommandBar>
+        </RelativePanel>
+        <ScrollViewer
+            x:Name="canvasScroll"
+            Grid.Row="1"
+            Background="{ThemeResource SystemControlPageBackgroundChromeLowBrush}"
+            ScrollViewer.HorizontalScrollBarVisibility="Auto"
+            ScrollViewer.VerticalScrollBarVisibility="Auto"
+            ZoomMode="Enabled">
+            <Grid
+                Width="{Binding ElementName=inkCanvas, Path=Width}"
+                Height="{Binding ElementName=inkCanvas, Path=Height}"
+                Background="{StaticResource InkCanvasBackground}">
+                <Image
+                    x:Name="image"
+                    Source="{x:Bind ViewModel.Image, Mode=TwoWay}"
+                    Stretch="None" />
+                <InkCanvas
+                    x:Name="inkCanvas"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Stretch" />
+            </Grid>
+        </ScrollViewer>
+        <CommandBar
+            x:Name="bottomCommandBar"
+            Grid.Row="2"
+            Style="{StaticResource InkCommandBarStyle}">
+            <CommandBar.PrimaryCommands>
+                <AppBarButton
+                    x:Uid="InkDrawPicture_ZoomInButton"
+                    BorderBrush="Transparent"
+                    BorderThickness="0,0,0,0"
+                    Command="{x:Bind ViewModel.ZoomInCommand}"
+                    Icon="ZoomIn" />
+                <AppBarButton
+                    x:Uid="InkDrawPicture_ZoomOutButton"
+                    BorderBrush="Transparent"
+                    BorderThickness="0,0,0,0"
+                    Command="{x:Bind ViewModel.ZoomOutCommand}"
+                    Icon="ZoomOut" />
+            </CommandBar.PrimaryCommands>
+            <CommandBar.SecondaryCommands>
+                <AppBarButton
+                    x:Uid="InkDrawPicture_OriginalSizeButton"
+                    BorderBrush="Transparent"
+                    BorderThickness="0,0,0,0"
+                    Command="{x:Bind ViewModel.ResetZoomCommand}"
+                    Icon="FullScreen" />
+                <AppBarButton
+                    x:Uid="InkDrawPicture_FitToScreenButton"
+                    BorderBrush="Transparent"
+                    BorderThickness="0,0,0,0"
+                    Command="{x:Bind ViewModel.FitToScreenCommand}">
+                    <FontIcon FontFamily="{ThemeResource SymbolThemeFontFamily}" Glyph="&#xE73F;" />
+                </AppBarButton>
+                <AppBarSeparator />
+                <AppBarButton
+                    x:Uid="InkDrawPicture_OpenImageButton"
+                    BorderBrush="Transparent"
+                    BorderThickness="0,0,0,0"
+                    Command="{x:Bind ViewModel.LoadImageCommand}">
+                    <FontIcon FontFamily="{ThemeResource SymbolThemeFontFamily}" Glyph="&#xEB9F;" />
+                </AppBarButton>
+                <AppBarButton
+                    x:Uid="InkDrawPicture_SaveImageButton"
+                    BorderBrush="Transparent"
+                    BorderThickness="0,0,0,0"
+                    Command="{x:Bind ViewModel.SaveImageCommand}"
+                    Icon="Save" />
+                <AppBarSeparator />
+                <AppBarButton
+                    x:Uid="InkDrawPicture_ClearAllButton"
+                    BorderBrush="Transparent"
+                    BorderThickness="0,0,0,0"
+                    Command="{x:Bind ViewModel.ClearAllCommand}"
+                    Icon="Delete" />
+            </CommandBar.SecondaryCommands>
+        </CommandBar>
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup x:Name="visualStateGroup">
                 <VisualState x:Name="SmallVisualState">
@@ -31,83 +198,5 @@
                 </VisualState>
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="Auto" />
-        </Grid.RowDefinitions>
-        <RelativePanel>
-            <TextBlock x:Name="headerTitle" x:Uid="InkDrawPictureHeader" Margin="{StaticResource MediumLeftMargin}" Style="{StaticResource PageTitleStyle}" MaxLines="1" TextTrimming="CharacterEllipsis" RelativePanel.LeftOf="toolbar" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignVerticalCenterWith="toolbar" />
-            <InkToolbar x:Name="toolbar" Background="Transparent" TargetInkCanvas="{x:Bind inkCanvas}" RelativePanel.AlignHorizontalCenterWithPanel="True">
-                <InkToolbarCustomToggleButton x:Uid="InkDrawPicture_TouchInkingButton" Background="Transparent" IsChecked="{x:Bind ViewModel.EnableTouch, Mode=TwoWay}">
-                        <FontIcon FontFamily="{ThemeResource SymbolThemeFontFamily}" Glyph="&#xED5F;" />
-                    </InkToolbarCustomToggleButton>
-                    <InkToolbarCustomToggleButton x:Uid="InkDrawPicture_MouseInkingButton" Background="Transparent" IsChecked="{x:Bind ViewModel.EnableMouse, Mode=TwoWay}">
-                        <FontIcon FontFamily="{ThemeResource SymbolThemeFontFamily}" Glyph="&#xE962;" />
-                    </InkToolbarCustomToggleButton>
-            </InkToolbar>
-            <CommandBar x:Name="topCommandBar" Style="{StaticResource InkCommandBarStyle}" RelativePanel.RightOf="toolbar" RelativePanel.AlignRightWithPanel="True">
-                <CommandBar.PrimaryCommands>
-                        <AppBarButton x:Uid="InkDrawPicture_ZoomInButton" Icon="ZoomIn" Command="{x:Bind ViewModel.ZoomInCommand}" BorderBrush="Transparent" BorderThickness="0,0,0,0" />
-                        <AppBarButton x:Uid="InkDrawPicture_ZoomOutButton" Icon="ZoomOut" Command="{x:Bind ViewModel.ZoomOutCommand}" BorderBrush="Transparent" BorderThickness="0,0,0,0" />
-                    </CommandBar.PrimaryCommands>
-                    <CommandBar.SecondaryCommands>
-                        <AppBarButton x:Uid="InkDrawPicture_OriginalSizeButton" Icon="FullScreen" Command="{x:Bind ViewModel.ResetZoomCommand}" BorderBrush="Transparent" BorderThickness="0,0,0,0" />
-                        <AppBarButton x:Uid="InkDrawPicture_FitToScreenButton" Command="{x:Bind ViewModel.FitToScreenCommand}" BorderBrush="Transparent" BorderThickness="0,0,0,0">
-                            <FontIcon FontFamily="{ThemeResource SymbolThemeFontFamily}" Glyph="&#xE73F;" />
-                        </AppBarButton>
-                        <AppBarSeparator />
-                        <AppBarButton x:Uid="InkDrawPicture_OpenImageButton" Command="{x:Bind ViewModel.LoadImageCommand}" BorderBrush="Transparent" BorderThickness="0,0,0,0" >
-                            <FontIcon FontFamily="{ThemeResource SymbolThemeFontFamily}" Glyph="&#xEB9F;" />
-                        </AppBarButton>
-                        <AppBarButton x:Uid="InkDrawPicture_SaveImageButton" Icon="Save" Command="{x:Bind ViewModel.SaveImageCommand}" BorderBrush="Transparent" BorderThickness="0,0,0,0" />
-                        <AppBarSeparator/>
-                        <AppBarButton x:Uid="InkDrawPicture_ClearAllButton" Icon="Delete" Command="{x:Bind ViewModel.ClearAllCommand}" BorderBrush="Transparent" BorderThickness="0,0,0,0" />
-                    </CommandBar.SecondaryCommands>
-            </CommandBar>
-        </RelativePanel>
-        <ScrollViewer
-            x:Name="canvasScroll"
-            Grid.Row="1"
-            Background="{ThemeResource SystemControlPageBackgroundChromeLowBrush}"
-            ScrollViewer.VerticalScrollBarVisibility="Auto"
-            ScrollViewer.HorizontalScrollBarVisibility="Auto"
-            ZoomMode="Enabled">
-                <Grid
-                    Background="{StaticResource InkCanvasBackground}"
-                    Width="{Binding ElementName=inkCanvas, Path=Width}"
-                    Height="{Binding ElementName=inkCanvas, Path=Height}">
-                    <Image
-                        x:Name="image"
-                        Source="{x:Bind ViewModel.Image, Mode=TwoWay}"
-                        Stretch="None" />                    
-                    <InkCanvas
-                        x:Name="inkCanvas"
-                        HorizontalAlignment="Stretch"
-                        VerticalAlignment="Stretch" />
-            </Grid>
-        </ScrollViewer>        
-        <CommandBar
-            x:Name="bottomCommandBar"
-            Grid.Row="2"
-            Style="{StaticResource InkCommandBarStyle}">
-            <CommandBar.PrimaryCommands>
-                <AppBarButton x:Uid="InkDrawPicture_ZoomInButton" Icon="ZoomIn" Command="{x:Bind ViewModel.ZoomInCommand}" BorderBrush="Transparent" BorderThickness="0,0,0,0" />
-                <AppBarButton x:Uid="InkDrawPicture_ZoomOutButton" Icon="ZoomOut" Command="{x:Bind ViewModel.ZoomOutCommand}" BorderBrush="Transparent" BorderThickness="0,0,0,0" />
-            </CommandBar.PrimaryCommands>
-            <CommandBar.SecondaryCommands>
-                <AppBarButton x:Uid="InkDrawPicture_OriginalSizeButton" Icon="FullScreen" Command="{x:Bind ViewModel.ResetZoomCommand}" BorderBrush="Transparent" BorderThickness="0,0,0,0" />
-                <AppBarButton x:Uid="InkDrawPicture_FitToScreenButton" Command="{x:Bind ViewModel.FitToScreenCommand}" BorderBrush="Transparent" BorderThickness="0,0,0,0">
-                    <FontIcon FontFamily="{ThemeResource SymbolThemeFontFamily}" Glyph="&#xE73F;" />
-                </AppBarButton>
-                <AppBarSeparator />
-                <AppBarButton x:Uid="InkDrawPicture_OpenImageButton" Command="{x:Bind ViewModel.LoadImageCommand}" BorderBrush="Transparent" BorderThickness="0,0,0,0">
-                    <FontIcon FontFamily="{ThemeResource SymbolThemeFontFamily}" Glyph="&#xEB9F;" />
-                </AppBarButton>
-                <AppBarButton x:Uid="InkDrawPicture_SaveImageButton" Icon="Save" Command="{x:Bind ViewModel.SaveImageCommand}" BorderBrush="Transparent" BorderThickness="0,0,0,0" />
-                <AppBarSeparator/>
-                <AppBarButton x:Uid="InkDrawPicture_ClearAllButton" Icon="Delete" Command="{x:Bind ViewModel.ClearAllCommand}" BorderBrush="Transparent" BorderThickness="0,0,0,0" />
-            </CommandBar.SecondaryCommands>
-        </CommandBar>
     </Grid>
 </Page>
