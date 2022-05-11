@@ -122,7 +122,7 @@
     <comment>Application display name</comment>
   </data>
   <data name="AppDescription" xml:space="preserve">
-    <value>Notes</value>
+    <value>The better text editor for Windows.</value>
     <comment>Application description</comment>
   </data>
   <data name="InkDrawHeader.Text" xml:space="preserve">
@@ -157,7 +157,7 @@
     <value>Zoom in</value>
     <comment>ZoomIn button label property for InkDraw</comment>
   </data>
-    <data name="InkDraw_ZoomInButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+  <data name="InkDraw_ZoomInButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
     <value>Zoom in</value>
     <comment>ZoomIn button tooltip property for InkDraw</comment>
   </data>
@@ -169,7 +169,7 @@
     <value>Zoom out</value>
     <comment>ZoomOut button label property for InkDraw</comment>
   </data>
-    <data name="InkDraw_ZoomOutButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+  <data name="InkDraw_ZoomOutButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
     <value>Zoom out</value>
     <comment>ZoomOut button tooltip property for InkDraw</comment>
   </data>
@@ -181,7 +181,7 @@
     <value>Cut</value>
     <comment>Cut button label property for InkDraw</comment>
   </data>
-    <data name="InkDraw_CutButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+  <data name="InkDraw_CutButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
     <value>Cut</value>
     <comment>Cut button tooltip property for InkDraw</comment>
   </data>
@@ -193,7 +193,7 @@
     <value>Copy</value>
     <comment>Copy button label property for InkDraw</comment>
   </data>
-    <data name="InkDraw_CopyButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+  <data name="InkDraw_CopyButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
     <value>Copy</value>
     <comment>Copy button tooltip property for InkDraw</comment>
   </data>
@@ -205,7 +205,7 @@
     <value>Paste</value>
     <comment>Paste button label property for InkDraw</comment>
   </data>
-    <data name="InkDraw_PasteButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+  <data name="InkDraw_PasteButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
     <value>Paste</value>
     <comment>Paste button tooltip property for InkDraw</comment>
   </data>
@@ -217,7 +217,7 @@
     <value>Undo</value>
     <comment>Undo button label property for InkDraw</comment>
   </data>
-    <data name="InkDraw_UndoButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+  <data name="InkDraw_UndoButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
     <value>Undo</value>
     <comment>Undo button tooltip property for InkDraw</comment>
   </data>
@@ -229,7 +229,7 @@
     <value>Redo</value>
     <comment>Redo button label property for InkDraw</comment>
   </data>
-    <data name="InkDraw_RedoButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+  <data name="InkDraw_RedoButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
     <value>Redo</value>
     <comment>Redo button tooltip property for InkDraw</comment>
   </data>
@@ -241,7 +241,7 @@
     <value>Load ink file</value>
     <comment>LoadInkFile button label property for InkDraw</comment>
   </data>
-    <data name="InkDraw_LoadInkFileButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+  <data name="InkDraw_LoadInkFileButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
     <value>Load ink file</value>
     <comment>LoadInkFile button tooltip property for InkDraw</comment>
   </data>
@@ -253,7 +253,7 @@
     <value>Save ink file</value>
     <comment>SaveInkFile button label property for InkDraw</comment>
   </data>
-    <data name="InkDraw_SaveInkFileButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+  <data name="InkDraw_SaveInkFileButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
     <value>Save ink file</value>
     <comment>SaveInkFile button tooltip property for InkDraw</comment>
   </data>
@@ -265,7 +265,7 @@
     <value>Export as image</value>
     <comment>ExportAsImage button label property for InkDraw</comment>
   </data>
-    <data name="InkDraw_ExportAsImageButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+  <data name="InkDraw_ExportAsImageButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
     <value>Export as image</value>
     <comment>ExportAsImage button tooltip property for InkDraw</comment>
   </data>
@@ -277,7 +277,7 @@
     <value>Clear all</value>
     <comment>ClearAll button label property for InkDraw</comment>
   </data>
-    <data name="InkDraw_ClearAllButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+  <data name="InkDraw_ClearAllButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
     <value>Clear all</value>
     <comment>ClearAll button tooltip property for InkDraw</comment>
   </data>
@@ -325,7 +325,7 @@
     <value>Undo</value>
     <comment>Undo button label property for InkSmartCanvas</comment>
   </data>
-    <data name="InkSmartCanvas_UndoButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+  <data name="InkSmartCanvas_UndoButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
     <value>Undo</value>
     <comment>Undo button tooltip property for InkSmartCanvas</comment>
   </data>
@@ -337,7 +337,7 @@
     <value>Redo</value>
     <comment>Redo button label property for InkSmartCanvas</comment>
   </data>
-    <data name="InkSmartCanvas_RedoButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+  <data name="InkSmartCanvas_RedoButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
     <value>Redo</value>
     <comment>Redo button tooltip property for InkSmartCanvas</comment>
   </data>
@@ -349,7 +349,7 @@
     <value>Load ink file</value>
     <comment>LoadInkFile button label property for InkSmartCanvas</comment>
   </data>
-    <data name="InkSmartCanvas_LoadInkFileButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+  <data name="InkSmartCanvas_LoadInkFileButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
     <value>Load ink file</value>
     <comment>LoadInkFile button tooltip property for InkSmartCanvas</comment>
   </data>
@@ -361,7 +361,7 @@
     <value>Save ink file</value>
     <comment>SaveInkFile button label property for InkSmartCanvas</comment>
   </data>
-    <data name="InkSmartCanvas_SaveInkFileButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+  <data name="InkSmartCanvas_SaveInkFileButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
     <value>Save ink file</value>
     <comment>SaveInkFile button tooltip property for InkSmartCanvas</comment>
   </data>
@@ -373,7 +373,7 @@
     <value>Transform text and shapes</value>
     <comment>TransformTextAndShapes button label property for InkSmartCanvas</comment>
   </data>
-    <data name="InkSmartCanvas_TransformTextAndShapesButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+  <data name="InkSmartCanvas_TransformTextAndShapesButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
     <value>Transform text and shapes</value>
     <comment>TransformTextAndShapes button tooltip property for InkSmartCanvas</comment>
   </data>
@@ -385,7 +385,7 @@
     <value>Clear all</value>
     <comment>ClearAll button label property for InkSmartCanvas</comment>
   </data>
-    <data name="InkSmartCanvas_ClearAllButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+  <data name="InkSmartCanvas_ClearAllButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
     <value>Clear all</value>
     <comment>ClearAll button tooltip property for InkSmartCanvas</comment>
   </data>
@@ -413,11 +413,11 @@
     <value>Mouse inking</value>
     <comment>Mouse inking button automation name property for InkDrawPicture</comment>
   </data>
-<data name="InkDrawPicture_ZoomInButton.Label" xml:space="preserve">
+  <data name="InkDrawPicture_ZoomInButton.Label" xml:space="preserve">
     <value>Zoom in</value>
     <comment>ZoomIn button label property for InkDrawPicture</comment>
   </data>
-    <data name="InkDrawPicture_ZoomInButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+  <data name="InkDrawPicture_ZoomInButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
     <value>Zoom in</value>
     <comment>ZoomIn button tooltip property for InkDrawPicture</comment>
   </data>
@@ -429,7 +429,7 @@
     <value>Zoom out</value>
     <comment>ZoomOut button label property for InkDrawPicture</comment>
   </data>
-    <data name="InkDrawPicture_ZoomOutButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+  <data name="InkDrawPicture_ZoomOutButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
     <value>Zoom out</value>
     <comment>ZoomOut button tooltip property for InkDrawPicture</comment>
   </data>
@@ -441,7 +441,7 @@
     <value>Original size</value>
     <comment>OriginalSize button label property for InkDrawPicture</comment>
   </data>
-    <data name="InkDrawPicture_OriginalSizeButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+  <data name="InkDrawPicture_OriginalSizeButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
     <value>Original size</value>
     <comment>OriginalSize button tooltip property for InkDrawPicture</comment>
   </data>
@@ -453,7 +453,7 @@
     <value>Fit to screen</value>
     <comment>FitToScreen button label property for InkDrawPicture</comment>
   </data>
-    <data name="InkDrawPicture_FitToScreenButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+  <data name="InkDrawPicture_FitToScreenButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
     <value>Fit to screen</value>
     <comment>FitToScreen button tooltip property for InkDrawPicture</comment>
   </data>
@@ -465,7 +465,7 @@
     <value>Open image</value>
     <comment>OpenImage button label property for InkDrawPicture</comment>
   </data>
-    <data name="InkDrawPicture_OpenImageButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+  <data name="InkDrawPicture_OpenImageButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
     <value>Open image</value>
     <comment>OpenImage button tooltip property for InkDrawPicture</comment>
   </data>
@@ -477,7 +477,7 @@
     <value>Save image</value>
     <comment>SaveImage button label property for InkDrawPicture</comment>
   </data>
-    <data name="InkDrawPicture_SaveImageButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+  <data name="InkDrawPicture_SaveImageButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
     <value>Save image</value>
     <comment>SaveImage button tooltip property for InkDrawPicture</comment>
   </data>
@@ -489,7 +489,7 @@
     <value>Clear all</value>
     <comment>ClearAll button label property for InkDrawPicture</comment>
   </data>
-    <data name="InkDrawPicture_ClearAllButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+  <data name="InkDrawPicture_ClearAllButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
     <value>Clear all</value>
     <comment>ClearAll button tooltip property for InkDrawPicture</comment>
   </data>
@@ -509,7 +509,7 @@
   <data name="Camera_Exception_InitializationCanceled" xml:space="preserve">
     <value>Camera control initialization has been canceled.</value>
   </data>
-  <data name="CameraControl_CameraButton.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">    
+  <data name="CameraControl_CameraButton.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
     <value>Take a photo</value>
     <comment>Camera control button automation name property</comment>
   </data>
@@ -517,7 +517,7 @@
     <value>Take a photo</value>
     <comment>Camera control button automation tooltip property</comment>
   </data>
-  <data name="CameraControl_SwitchCameraButton.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">    
+  <data name="CameraControl_SwitchCameraButton.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
     <value>Switch camera</value>
     <comment>Camera control switch camera button automation name property</comment>
   </data>
@@ -541,23 +541,23 @@
     <value>Light</value>
     <comment>Light theme text for Settings</comment>
   </data>
-  <data name="Settings_About.Text" xml:space="preserve">    
+  <data name="Settings_About.Text" xml:space="preserve">
     <value>About this application</value>
     <comment>About this application title for Settings</comment>
   </data>
-  <data name="Settings_AboutDescription.Text" xml:space="preserve">    
+  <data name="Settings_AboutDescription.Text" xml:space="preserve">
     <value>Settings page placeholder text.  Your app description goes here.</value>
     <comment>About this application description for Settings</comment>
   </data>
-  <data name="Settings_PrivacyTermsLink.Content" xml:space="preserve">    
+  <data name="Settings_PrivacyTermsLink.Content" xml:space="preserve">
     <value>Privacy Statement</value>
     <comment>Privacy Statement link content for Settings</comment>
   </data>
-  <data name="Settings_PrivacyTermsLink.NavigateUri" xml:space="preserve">  
+  <data name="Settings_PrivacyTermsLink.NavigateUri" xml:space="preserve">
     <value>https://YourPrivacyUrlGoesHere/</value>
     <comment>Here is your Privacy Statement url for Settings</comment>
   </data>
-  <data name="Settings_Personalization.Text" xml:space="preserve">   
+  <data name="Settings_Personalization.Text" xml:space="preserve">
     <value>Personalization</value>
     <comment>Personalization text for Settings</comment>
   </data>
